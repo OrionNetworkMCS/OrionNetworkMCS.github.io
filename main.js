@@ -1,6 +1,7 @@
 const myHeading = document.querySelector("#ttl");
 const myIMG = document.querySelector("img");
 const myButton = document.querySelector("#thebutton");
+const myButton2 = document.querySelector("#button2");
 myIMG.onclick = function () {
   let mySrc = myIMG.getAttribute("src");
   if (
@@ -39,6 +40,10 @@ if(!localStorage.getItem('name')) {
 
 myButton.onclick = function () {
     setusername();
+};
+
+myButton2.onclick = function () {
+    localStorage.clear();
 };
 
 myHeading.onclick = function () {
