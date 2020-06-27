@@ -31,12 +31,13 @@ function setusername() {
     myHeading.textContent = 'Hello ' + myName + '!!!';
 };
 
-if(!localStorage.getItem('name')) {
+/* if(!localStorage.getItem('name')) {
     setusername()
 } else {
     let storedName = localStorage.getItem('name');
   myHeading.textContent = 'Hello ' + storedName;
 };
+*/
 
 myButton.onclick = function () {
     setusername();
