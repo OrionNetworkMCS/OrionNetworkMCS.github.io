@@ -1,31 +1,23 @@
-<!DOCTYPE html>
-<html>
-    <div id="paypalH">
-        <head>
-            <h1>Purchase Via PayPal</h1>
-            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                <input type="hidden" name="cmd" value="_s-xclick">
-                <table>
-                <tr><td><input type="hidden" name="on0" value="Complexity">Complexity</td></tr><tr><td><select name="os0">
-                    <option value="Basic">Basic $5.00 USD</option>
-                    <option value="Advanced">Advanced $7.50 USD</option>
-                    <option value="Pro">Pro $10.00 USD</option>
-                </select> </td></tr>
-                <tr><td><input type="hidden" name="on1" value="Bot Use">Bot Use</td></tr><tr><td><select name="os1">
-                    <option value="Personal">Personal </option>
-                    <option value="Community">Community </option>
-                    <option value="Business">Business </option>
-                    <option value="Utility">Utility </option>
-                    <option value="Other:">Other: </option>
-                </select> </td></tr>
-                <tr><td><input type="hidden" name="on2" value="Comments?">Comments?</td></tr><tr><td><input type="text" name="os2" maxlength="200"></td></tr>
-                <tr><td><input type="hidden" name="on3" value="If Other, Use This To Specify:">If Other, Use This To Specify:</td></tr><tr><td><input type="text" name="os3" maxlength="200"></td></tr>
-                </table>
-                <input type="hidden" name="currency_code" value="USD">
-                <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----">
-                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-                <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-                </form>                
-        </head>
-    </div>
-</html>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<table>
+<tr><td><input type="hidden" name="on0" value="Complexity">Complexity</td></tr><tr><td><select name="os0">
+	<option value="Basic">Basic $9.99 USD</option>
+	<option value="Advanced">Advanced $14.99 USD</option>
+	<option value="Pro">Pro $19.99 USD</option>
+</select> </td></tr>
+<tr><td><input type="hidden" name="on1" value="Bot Use">Bot Use</td></tr><tr><td><select name="os1">
+	<option value="Personal">Personal </option>
+	<option value="Community">Community </option>
+	<option value="Business">Business </option>
+	<option value="Utility">Utility </option>
+	<option value="Game">Game </option>
+	<option value="Other:">Other: </option>
+</select> </td></tr>
+<tr><td><input type="hidden" name="on2" value="Comments?">Comments?</td></tr><tr><td><input type="text" name="os2" maxlength="200"></td></tr>
+<tr><td><input type="hidden" name="on3" value="If Other, Use This To Specify:">If Other, Use This To Specify:</td></tr><tr><td><input type="text" name="os3" maxlength="200"></td></tr>
+</table>
+<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
